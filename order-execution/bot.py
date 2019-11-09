@@ -1,14 +1,16 @@
 ### IMPORTS
-import tradersbot as tt
+import sys
 import math
-import random
 import heapq
+import random
+import tradersbot as tt
+
 
 ### CONSTANTS
 LOGIN = {
-	'host': '127.0.0.1',
-	'id': 'trader0',
-	'password': 'trader0'
+	'host': sys.argv[1],
+	'id': sys.argv[2],
+	'password': sys.argv[3]
 }
 
 POS_LIMIT = 500
