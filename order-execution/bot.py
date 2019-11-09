@@ -87,7 +87,7 @@ def news_method(msg, order):
 	# Trade
 	if source in NEWS_DEVIATIONS and ticker in PRICES:
 		threshold = deviation_to_probability(NEWS_DEVIATIONS[source])
-		print(threshold)
+		# print(threshold)
 		if random.random() < threshold:
 			if PRICES[ticker] + MARGIN < prediction_price:
 				top_book_volume = BOOKS[ticker]['bids'][-1][1]
