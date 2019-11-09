@@ -15,8 +15,8 @@ ORDER_LIMIT = 100
 # Keeps track of prices
 SECURITIES = {}
 PREDS = {}
-TIME = 0;
-OPEN_ORDERS = {};
+time = 0;
+open_orders = {};
 
 # Initializes the prices
 # Initializes prediction dictionary
@@ -26,7 +26,7 @@ def ack_register_method(msg, order):
 	for security in security_dict.keys():
 		if not(security_dict[security]['tradeable']): 
 			continue
-		SECURITIES[security] = security_dict[security]
+		SECURITIES[security] = security_dict[security]['starting_price']
 
 	for security in security_dict:
 		PREDS[security] = {};
